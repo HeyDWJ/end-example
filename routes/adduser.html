@@ -1,0 +1,43 @@
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <script>
+      /*fetch URL*/
+      myreq = () => {
+        if(window.fetch) console.log('Log message{from ding} : supported.');
+        else console.log('Log message{from ding} : not supported.');
+
+        const route1='http://api.lovecust.com/ecust/activities';
+        const route2='http://localhost:3000/allusers';
+
+        fetch(route2)
+          .then(function(response) {
+            return response.json()
+          }).then(function(json) {
+            console.log('Log message{from ding}: parsed json', json)
+          }).catch(function(ex) {
+            console.log('Log message{from ding}: parsing failed', ex)
+          })
+      }
+    </script>
+  </head>
+
+  <body>
+    <div>Add User<br/>
+      <form action="http://127.0.0.1:3000/" method="POST">
+      User Name: <input type="text" name="user_name">  <br>
+      Password : <input type="password" name="user_password">
+      <input type="submit" value="Submit">
+    </div>
+    <p>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+    <div>Launch fetch<br/>
+      <form onsubmit="return myreq()">
+        <input tepe='text'> <br />
+        launch fetch method <input type="button" value="fetch" onclick="myreq()"/>
+      </form>
+      <div id='myfetch'> </div>
+    </div>
+  </form>
+  </body>
+</html>

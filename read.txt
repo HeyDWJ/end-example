@@ -1,0 +1,32 @@
+##express command.
+in windows
+#set DEBUG=myapp & npm start
+set DEBUG=front-back & npm start
+
+in Linux or windows-git-shell
+ #DEBUG=myapp npm start
+ DEBUG=front-back npm start
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+##project info.
+
+#aim{Maybe I should have used the word 'goal'.}
+create an project which complete the contact between front-end and back-end.
+
+back-end entry app.js
+
+front-end entry ./front-end/index.html
+
+#dependencies
+mysql service with database named ding_demo with a table named users.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+##ding accomplishment
+
+#back-end
+use callback to get info queried from database.
+use middle-ware to solve the CORS problem.
+
+$front-end
+use fetch-api to gain remote source.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###extra file.
+file ./TCP/net.js is an example of TCP connection in node.js
